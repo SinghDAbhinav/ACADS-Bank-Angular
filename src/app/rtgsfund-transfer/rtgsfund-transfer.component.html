@@ -1,0 +1,73 @@
+<app-dashboard></app-dashboard>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+ <!-- <div class="header">
+    <h1>Welcome To ACADS Bank</h1>
+  </div>-->
+  <div class="row">
+    <h2 style="text-align: center;">Initiate RTGS Payment</h2>
+    <form #regform="ngForm">
+      <div class="container">
+        <label for="fromAccountNumber"><b>From Account</b></label>
+        <input type="text" #fromAccNumber="ngModel" placeholder="Enter Your Account Number" name="fromAccNo" required ngModel>
+        <div *ngIf="fromAccNumber.invalid && (fromAccNumber.dirty || fromAccNumber.touched)">
+          <div *ngIf="fromAccNumber.errors.required" style="color: red;">Account Number is required</div>
+        </div>
+
+
+        <label for="toAccountNumber"><b>To Account</b></label>
+        <input type="text" #toAccNumber="ngModel" placeholder="Enter Beneficiary Account Number" name="toAccNo" required ngModel>
+        <div *ngIf="toAccNumber.invalid && (toAccNumber.dirty || toAccNumber.touched)">
+          <div *ngIf="toAccNumber.errors.required" style="color: red;">Account Number is required</div>
+        </div>
+       
+        <button type="submit" id="addPayee">Add New Payee</button><br/>
+
+        <label for="amount"><b>Amount</b></label>
+        <input type="text" #amount="ngModel" placeholder="Enter the Amount" name="Amount" required ngModel>
+        <div *ngIf="amount.invalid && (amount.dirty || amount.touched)">
+          <div *ngIf="amount.errors.required" style="color: red;">Amount is required</div>
+        </div>
+
+
+        <label for="transDate"><b>Transaction Date</b></label>
+        <input type="date" #TransDate="ngModel" placeholder="Enter Transaction Date" name="transactionDate" required ngModel>
+        <div *ngIf="TransDate.invalid && (TransDate.dirty || TransDate.touched)">
+          <div *ngIf="TransDate.errors.required" style="color: red;">Transaction Date is required</div>
+        </div>
+
+
+        <label for="maturityInstructions"><b>Maturity Instructions</b></label>
+        <input type="text" #maturityInstruc="ngModel"  name="maturityInstr" ngModel>
+        
+        <label for="remarks"><b>Remarks</b></label>
+        <input type="text" #remark="ngModel" name="remarks" ngModel>
+
+        <span id="buttons">
+            <button type="submit" id="save">Save</button>
+        </span>
+        <span id="buttons">
+            <button type="reset" id="reset">Reset</button>
+        </span>
+        <span id="buttons">
+            <button type="submit" id="saveAsTemplate">Save as Template</button>
+        </span>
+        <span id="buttons">
+            <button type="submit" id="continue">Continue</button>
+        </span>
+      </div>
+    </form>
+  </div>
+</body>
+
+</html>
+
+

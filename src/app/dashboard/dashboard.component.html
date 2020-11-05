@@ -1,0 +1,29 @@
+<body>
+<!-- 
+    <div class="header">
+
+        <h1>ACADS Bank of LTI</h1>
+    </div> -->
+    <div class="topnav ">
+        <ul>
+            <li><a [routerLink]="['/dashboardHomeLink']">Dashboard</a></li>
+            <li><a [routerLink]="['/userProfileLink']">User Profile</a></li>
+            <li> <a [routerLink]="['/accountStatementLink']">Account Statement</a></li>
+            <li> <a [routerLink]="['/accountSummaryLink']">Account Summary</a></li>
+            <li> <a [routerLink]="['/netBankingLink']">Funds Transfer</a></li>
+            <li> <a [routerLink]="['/beneficiariesLink']">Beneficiaries</a></li>
+            <li> <a [routerLink]="['/changePasswordLink']">Change Password</a></li>
+
+
+            <!-- <li> <a [routerLink]="['/sessionExpiredLink']"></a></li> -->
+
+        </ul>
+    </div>
+    <div>
+        <router-outlet></router-outlet>
+    </div>
+
+    <!-- <div class="footer">
+        <p>© 2020 ACADS Bank of LTI All Rights Reserved.</p>
+    </div> -->
+</body>

@@ -1,0 +1,129 @@
+*{
+    box-sizing: border-box;
+}
+
+.header{
+    padding: 5px;
+    color:indigo;
+    text-align: center;
+   /* background: white;*/
+    width: 80%;
+    margin: auto;   /*horizontally center    10%(left)+40%(center)40%+10%(right)*/
+}
+
+.container{
+    text-align: center;
+    padding: 16px;
+    width: 350px;
+    margin: auto;
+}
+
+.navigation{
+    padding: 3px 10px;
+    overflow: hidden;             /*visible, hidden, scroll, auto*/
+   /*background-color: darkblue;*/
+    width: 80%;
+    margin:auto;
+    margin-right: 16px;
+}
+.navigation ul{
+    list-style-type: none;
+}
+.navigation a{
+    float: left;
+    color:purple;
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+    letter-spacing: 1px;
+    height: 70px;
+}
+
+.row{
+        width: 80%;
+        margin: auto;
+       /* background-color: white;*/
+        padding: 20px;
+        margin-top: 20px;
+        overflow: hidden;
+}
+
+input[type=text], input[type=password],input[type=date]{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    background-color:;
+    /*inline : you cannot set width and height
+      inline-block :  */
+    display: inline-block;    /*none,inline,inline-block*/
+    border: 1px solid #ccc;
+    box-sizing: border-box;   /*include padding and border in the total width and height*/
+}
+
+button{
+    background-color:black ;
+    color:white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer ;
+   /* margin-right:16px;*/
+    width: 100%;
+}
+#addPayee{
+    background-color:black ;
+    color:white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer ;
+   /* margin-right:16px;*/
+    width: 50%;
+}
+#buttons{
+    float: left;
+    text-align:center;
+    width: fit-content;
+    /*width: 100px;*/
+    display:inline-block;
+    margin-right: 16px;
+}
+
+/*.buttons{
+    width: 25%;
+    width: 350px;
+    margin: auto;
+   /* background-color: white;*/
+   /* padding: 20px;
+    margin-top: 0px;
+    overflow: hidden;
+}*/
+
+/*#save,#reset,#ssaveAsTemplate,#continue {
+    display:inline-block;
+    }*/
+    
+
+body{
+    background-image: url("E:\LTI Training\Banking Application Angular Project\banking-app\src\assets\bg-01.jpg");
+    background-color: blueviolet;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: Poppins-Regular, sans-serif;;
+}
+
+p{
+    font-size: 15px;
+    text-align: center;
+    font-weight: bold;
+}
+/*.hero-image {
+    background-image: url("./assets/images/lti.jpg"); /* The image used */
+  /*  background-color: #cccccc; /* Used if the image is unavailable */
+   /* height: 500px; /* You must set a specified height */
+   /* background-position: center; /* Center the image */
+   /* background-repeat: no-repeat; /* Do not repeat the image */
+   /* background-size: cover; /* Resize the background image to cover the entire container */
+  /*}*/
+  

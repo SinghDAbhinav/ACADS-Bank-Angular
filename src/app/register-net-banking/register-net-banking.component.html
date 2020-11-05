@@ -1,0 +1,90 @@
+<app-dashboard></app-dashboard>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <!-- <div class="header">
+    <h1>Welcome To ACADS Bank</h1>
+  </div> -->
+
+  <!-- <div class="navigation">
+    <ul>
+      <li><a href="Register.html"><h3><u>Register</u></h3></a></li>
+      <li><a href="Login.html"><h3><u>Login</u></h3></a></li>
+      <li><a href="ForgotPassword.html"><h3><u>Forgot Password</u></h3></a></li>
+    </ul>
+  </div> -->
+
+  <div class="row">
+    <h2 style="text-align: center;">Registration for Internet Banking</h2>
+    <form #regform="ngForm">
+      <div class="container">
+        <label for="accountNumber"><b>Account Number</b></label>
+        <input type="text" #accNumber="ngModel" placeholder="Enter Account Number" name="accNo" required ngModel>
+        <div *ngIf="accNumber.invalid && (accNumber.dirty || accNumber.touched)">
+          <div *ngIf="accNumber.errors.required" style="color: red;">Account Number is required</div>
+        </div>
+
+
+        <label for="psw"><b>Set Login Password</b></label>
+        <input type="password" #pass="ngModel" placeholder="Enter Password" name="psw" required
+          pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" ngModel>
+        <div *ngIf="pass.invalid && (pass.dirty || pass.touched)">
+          <div *ngIf="pass.errors.required" style="color: red;">Password is required</div>
+          <div *ngIf="pass.errors.pattern" style="color: red;">Password is invalid</div>
+        </div>
+
+
+        <label for="pswConf"><b>Confirm Login Password</b></label>
+        <input type="password" #pswConfirm="ngModel" placeholder="Re-enter Login Password" name="passwordConfirm"
+          required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" ngModel>
+        <div *ngIf="pswConfirm.invalid && (pswConfirm.dirty || pswConfirm.touched)">
+          <div *ngIf="pswConfirm.errors.required" style="color: red;">Password is required</div>
+          <div *ngIf="pswConfirm.errors.pattern" style="color: red;">Password is invalid</div>
+        </div>
+
+
+        <label for="transPsw"><b>Set Transaction Password</b></label>
+        <input type="password" #transactionPass="ngModel" placeholder="Enter Transaction Password"
+          name="transactionPassword" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" ngModel>
+        <div *ngIf="transactionPass.invalid && (transactionPass.dirty || transactionPass.touched)">
+          <div *ngIf="transactionPass.errors.required" style="color: red;">Password is required</div>
+          <div *ngIf="transactionPass.errors.pattern" style="color: red;">Password is invalid</div>
+        </div>
+
+
+        <label for="transpswConf"><b>Confirm Transaction Password</b></label>
+        <input type="password" #transpswConfirm="ngModel" placeholder="Re-enter Transaction Password"
+          name="transactionpasswordConfirm" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" ngModel>
+        <div *ngIf="transpswConfirm.invalid && (transpswConfirm.dirty || transpswConfirm.touched)">
+          <div *ngIf="transpswConfirm.errors.required" style="color: red;">Password is required</div>
+          <div *ngIf="transpswConfirm.errors.pattern" style="color: red;">Password is invalid</div>
+        </div>
+
+
+        <label for="transpswConf"><b>Enter OTP</b></label>
+        <input type="password" name="OTP" required>
+
+        <button type="submit">Submit</button>
+      </div>
+      <div class="checkbox-div">
+						
+
+        <span class="login-link">
+          <a href="#"  [routerLink]="['/netBankingLink']" class="txt1">
+            Already a User? Sign In.
+          </a>
+        </span>
+      </div>
+      
+    </form>
+  </div>
+</body>
+
+</html>
